@@ -21,7 +21,7 @@
     <!-- Squad theme CSS -->
     <link href="css/style.css" rel="stylesheet">
 	<link href="color/default.css" rel="stylesheet">
-	
+
   <!-- CSS for slidesjs.com example -->
 
 
@@ -226,13 +226,17 @@ $(function(){
 								<li>
 									<a href="#contact" class="gn-icon gn-icon-archive">Contact</a>
 								</li>
+								<li><a href="#registration" class="gn-icon gn-icon-cog">Register</a></li>
+
+								
 							</ul>
 						</div><!-- /gn-scroller -->
 					</nav>
 				</li>
 				<li><a href="index.html">BU ROCK AND INDIE SOCIETY</a></li>
-				<li class="Register" style="margin-left:20%"><a href="#">Register</a></li>
-				<li class="Login"><a href="#">Login</a></li>
+
+				
+				
 				<li><ul class="company-social">						
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
@@ -407,6 +411,83 @@ $(function(){
 		</div>
 	</section>
 	<!-- /Section: contact -->
+	<!-- Section : Login -->
+		<section id="login" class= "container">
+		
+		<div class="heading-contact marginbot-50">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+	
+					<div class="section-heading" style="text-align: center">
+					<h2>login</h2>
+					</div>
+				
+				</div>
+			</div>
+			</div>
+		</div>
+		<form id="form-login" method ="POST">
+		
+		<div class="form-group" name="email-login">
+				<label>Email</label> <br>
+					<input type="email" class="form-control" name="email-l" value="" required>
+		</div>
+	
+		<div class = "form-group" name="password-login" >
+				<label>Password</label> </br>
+					<input type="password" class="form-control" name="password-l" value="" required>
+		</div>
+
+	</form>
+	
+	</br>
+	
+	</section>
+	<!--/Section :Login -->
+	<!-- Section : Register -->
+	<section id="registration" class= "container">
+		
+		<div class="heading-contact marginbot-50">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+	
+					<div class="section-heading" style="text-align: center">
+					<h2>Registration</h2>
+					</div>
+				
+				</div>
+			</div>
+			</div>
+		</div>
+		<form id="form-reg" method ="POST">
+		
+		<div class="form-group" name="name-1">
+				<label>Name</label> <br>
+					<input type="" class="form-control" name="name" value="" required>
+		</div>
+		
+		<div class="form-group" name="email-1">
+				<label>Email</label> <br>
+					<input type="email" class="form-control" name="email" value="" required>
+		</div>
+	
+		<div class = "form-group" name="password-1" >
+				<label>Password</label> </br>
+					<input type="password" class="form-control" name="password" value="" required>
+		</div>
+		
+		<div class="form-group" name "retype-1">
+				<label>Re-type Password</label> </br>
+					<input type="password" class="form-control" name="retype" value="" required>
+		
+		</div>
+
+	</form>
+	</section>
+	<!-- /Section : Register -->
+
 
 	<footer>
 		<div class="container">
@@ -420,7 +501,8 @@ $(function(){
 	</footer>
 
     <!-- Core JavaScript Files -->
-  
+
+
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>	
 	<script src="js/classie.js"></script>
