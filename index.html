@@ -405,7 +405,7 @@ $(function(){
 	</section>
 	<!-- /Section: contact -->
 	<!-- Section : Login -->
-		<section id="login" class= "container">
+		<section id="login" class= "home-section container">
 		
 		<div class="heading-contact marginbot-50">
 			<div class="container">
@@ -424,12 +424,12 @@ $(function(){
 		
 		<div class="form-group" name="email-login">
 				<label>Email</label> <br>
-					<input type="email" class="form-control" name="email-l" value="" required>
+					<input type="email" class="form-control" name="email" value="" required>
 		</div>
 	
 		<div class = "form-group" name="password-login" >
 				<label>Password</label> </br>
-					<input type="password" class="form-control" name="password-l" value="" required>
+					<input type="password" class="form-control" name="password" value="" required>
 		</div>
 		
 		<input type="submit" value="submit" class= "btn btn-default">
@@ -439,7 +439,7 @@ $(function(){
 	
 	<!--/Section :Login -->
 	<!-- Section : Register -->
-	<section id="registration" class= "container">
+	<section id="registration" class= "home-section container">
 		
 		<div class="heading-contact marginbot-50">
 			<div class="container">
@@ -454,12 +454,18 @@ $(function(){
 			</div>
 			</div>
 		</div>
-		<form id="form-reg" method ="POST">
+		<form id="form-reg" method ="POST" action="phpBackend/register.php">
 		
 		<div class="form-group" name="name-1">
-				<label>Name</label> <br>
-					<input type="" class="form-control" name="name" value="" required>
+				<label>Forename</label> <br>
+					<input type="" class="form-control" name="forename" value="" required>
 		</div>
+		
+				<div class="form-group" name="name-2">
+				<label>Surname</label> <br>
+					<input type="" class="form-control" name="surname" value="">
+		</div>
+		
 		
 		<div class="form-group" name="email-1">
 				<label>Email</label> <br>
@@ -468,17 +474,37 @@ $(function(){
 	
 		<div class = "form-group" name="password-1" >
 				<label>Password</label> </br>
-					<input type="password" class="form-control" name="password" value="" required>
+					
+					<input id ="password" type="password" class="form-control" pattern =".{6,}" oninvalid = 'setCustomValidity("Password must be 6 to 10 characters long" )'name="password" value="" required>
 		</div>
 		
 		<div class="form-group" name "retype-1">
 				<label>Re-type Password</label> </br>
-					<input type="password" class="form-control" name="retype" value="" required>
+					<input  type="password" class="form-control" name="retype" oninput="verify(this)">
 		
 		</div>
+		<script language ="javascript" type='text/javascript'>
+		
+		function verify(input) {
+				if(input.value != document.getElementById('password').value) {
+				input.setCustomValidity('Passwords do not match');
+				}
+				else {
+				input.setCustomValidity('');
+				}
+				}	
+				
+					</script>
+					
 		<input type="submit" value="submit" class= "btn btn-default">
+		
+
 	</form>
 	</section>
+
+	
+	
+	
 	<!-- /Section : Register -->
 	<br>
 
